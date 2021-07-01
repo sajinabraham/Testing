@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Tab</string>
+    <string name="title_activity_login" tools:ignore="ExtraTranslation">Login</string>
+    <string name="username" tools:ignore="ExtraTranslation">Username</string>
+    <string name="password" tools:ignore="ExtraTranslation">Password</string>
+    <string name="about" tools:ignore="ExtraTranslation">About</string>
+    <string name="more" tools:ignore="ExtraTranslation">More</string>
+    <string name="more_info" tools:ignore="ExtraTranslation">More Info</string>
+    <string name="invalid_username" tools:ignore="ExtraTranslation">Not a valid username</string>
+    <string name="invalid_password" tools:ignore="ExtraTranslation">Password Should be Minimum 9 Characters</string>
+    <string name="login_failed" tools:ignore="ExtraTranslation">"Login failed"</string>
+    <string name="login_successful" tools:ignore="ExtraTranslation">"Login Successful"</string>
+    <string name="invalid_credentials" tools:ignore="ExtraTranslation">"Invalid Credentials"</string>
+    <string name="save">Save</string>
+    <string name="firstname">First Name</string>
+    <string name="surname">Surname</string>
+    <string name="year_of_birth">Year Of Birth</string>
+
+</resources>
