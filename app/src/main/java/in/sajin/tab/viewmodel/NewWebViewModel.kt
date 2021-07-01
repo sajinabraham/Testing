@@ -12,12 +12,18 @@ import androidx.lifecycle.ViewModel
 
 class NewWebViewModel : ViewModel() {
 
-    val webViewUrl = MutableLiveData<String>().apply{ value = "file:///android_asset/html_files/gallery_page.html" }
+    /**
+     * Get Mutable Data instance for webview
+     * @return
+     */
+    val webViewUrl = MutableLiveData<String>().apply {
+        value = "file:///android_asset/html_files/gallery_page.html"
+    }
 
     companion object WebViewUrlLoader {
         @BindingAdapter("loadUrl")
         @JvmStatic
-        fun  WebView.setUrl(url: String) {
+        fun WebView.setUrl(url: String) {
             this.loadUrl(url)
             this.clearCache(true)
             this.clearHistory()

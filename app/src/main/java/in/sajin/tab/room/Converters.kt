@@ -7,6 +7,9 @@ import java.io.ByteArrayOutputStream
 
 class Converters {
 
+    /**
+     * compressing bitmap image using function
+     */
     @TypeConverter
     fun fromBitmap(bitmap: Bitmap): ByteArray {
         val outputStream = ByteArrayOutputStream()

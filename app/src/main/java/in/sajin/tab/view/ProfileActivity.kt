@@ -91,7 +91,6 @@ class ProfileActivity : AppCompatActivity() {
 
             R.id.more_info -> MoreInfoActivity.start(this)
             R.id.camera -> startActivity(intent)
-            //R.id.about -> AboutActivity.start(this)
             R.id.about -> AboutActivity.start(this)
             else -> return super.onOptionsItemSelected(item)
         }

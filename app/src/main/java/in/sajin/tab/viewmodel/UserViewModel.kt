@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class UserViewModel(private val context: Context, private val user:User) : ViewModel() {
+class UserViewModel(private val context: Context, private val user: User) : ViewModel() {
     @JvmField
     var username = MutableLiveData<String>()
 
@@ -36,7 +36,7 @@ class UserViewModel(private val context: Context, private val user:User) : ViewM
     }
 
     /**
-     * Event generated for login button
+     * Event  for login button
      */
     fun onLoginClick() {
         user.username = username.value
@@ -46,8 +46,7 @@ class UserViewModel(private val context: Context, private val user:User) : ViewM
         } else if (!user.isValidPassword) {
             Toast.makeText(context, R.string.invalid_password, Toast.LENGTH_SHORT)
                 .show()
-        }
-        else if (user.isValidCredential) {
+        } else if (user.isValidCredential) {
             getBusy().value = View.VISIBLE
             Handler().postDelayed({
                 getBusy().value = View.GONE
@@ -64,7 +63,7 @@ class UserViewModel(private val context: Context, private val user:User) : ViewM
     }
 
     /**
-     * Constructor for UserViewModel
+     *   UserViewModel Constructor
      */
     init {
         welcome.value = user.welcomeMessage

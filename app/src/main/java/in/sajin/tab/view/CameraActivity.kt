@@ -164,6 +164,7 @@ class CameraActivity : AppCompatActivity() {
         }
     }
 
+    // Getting File bath and bitmap save to room DB
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
@@ -231,9 +232,16 @@ class CameraActivity : AppCompatActivity() {
         myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
 
         btnCapture?.setOnClickListener {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                        Manifest.permission.CAMERA)) {
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.CAMERA
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(
+                        this,
+                        Manifest.permission.CAMERA
+                    )
+                ) {
                 } else {
                     ActivityCompat.requestPermissions(
                         this, arrayOf(Manifest.permission.CAMERA),
