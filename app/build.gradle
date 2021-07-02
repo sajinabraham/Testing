@@ -71,4 +71,7 @@ dependencies {
     //Image loading for Android backed by Kotlin Coroutines.
     implementation("io.coil-kt:coil:1.2.2")
 
+    //for unit test assertion
+    testImplementation 'androidx.test.ext:truth:1.4.0'
+
 }
