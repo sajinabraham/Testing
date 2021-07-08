@@ -232,23 +232,10 @@ class CameraActivity : AppCompatActivity() {
         myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
 
         btnCapture?.setOnClickListener {
-            if (ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.CAMERA
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(
-                        this,
-                        Manifest.permission.CAMERA
-                    )
-                ) {
-                } else {
-                    ActivityCompat.requestPermissions(
-                        this, arrayOf(Manifest.permission.CAMERA),
-                        1
-                    )
-                }
-            }
+            ActivityCompat.requestPermissions(
+                this, arrayOf(Manifest.permission.CAMERA),
+                1
+            )
         }
 
     }
